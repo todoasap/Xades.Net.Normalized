@@ -5,6 +5,8 @@ using System.Linq;
 using System.Security.Cryptography.Xml;
 using System.Text;
 using System.Threading.Tasks;
+#pragma warning disable 1591
+#pragma warning disable 1574
 
 namespace Microsoft.Xades
 {
@@ -35,3 +37,5 @@ namespace Microsoft.Xades
         }
     }
 }
+#pragma warning restore 1591
+#pragma warning restore 1574

@@ -1,7 +1,8 @@
-FirmaXadesNet
+Xades.NetCore
 =============
 
-:red_circle: **Atención**: este proyecto se encuentra sin mantenimiento.
+[ENGLISH](/README.EN.md)
+[ITALIANO](/README.IT.md)
 
 INTRODUCCIÓN
 -------------
@@ -12,6 +13,8 @@ CARACTERÍSTICAS
 ---------------
 
 - Generación de firmas XAdES-BES, XAdES-EPES, XAdES-T y XAdES-XL.
+
+- Utiliza los certificados admitidos por Windows, incluido Smart Cards, Token Usb....
 
 - Formatos Externally Detached, Internally Detached, Enveloped y Enveloping.
 

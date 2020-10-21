@@ -21,6 +21,8 @@
 // 
 // --------------------------------------------------------------------------------------------------------------------
 
+#pragma warning disable CA1416
+
 using System;
 using System.Reflection;
 using System.Security.Cryptography;
@@ -124,3 +126,4 @@ namespace FirmaXadesNet.Crypto
         #endregion
     }
 }
+#pragma warning restore CA1416

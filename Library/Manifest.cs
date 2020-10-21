@@ -5,6 +5,8 @@ using System.Security.Cryptography.Xml;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
+#pragma warning disable 1591
+#pragma warning disable 1574
 
 namespace Microsoft.Xades
 {
@@ -77,3 +79,5 @@ namespace Microsoft.Xades
         #endregion
     }
 }
+#pragma warning restore 1591
+#pragma warning restore 1574

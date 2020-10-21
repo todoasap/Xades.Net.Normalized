@@ -73,7 +73,10 @@ namespace FirmaXadesNet.Validation
                 TimeStampToken token = new TimeStampToken(new CmsSignedData(timeStamp.EncapsulatedTimeStamp.PkiData));
 
                 byte[] tsHashValue = token.TimeStampInfo.GetMessageImprintDigest();
-                Crypto.DigestMethod tsDigestMethod = Crypto.DigestMethod.GetByOid(token.TimeStampInfo.HashAlgorithm.ObjectID.Id);
+                
+                //TODO: Verificare  
+                // Crypto.DigestMethod tsDigestMethod = Crypto.DigestMethod.GetByOid(token.TimeStampInfo.HashAlgorithm.ObjectID.Id);
+                Crypto.DigestMethod tsDigestMethod = Crypto.DigestMethod.GetByOid(token.TimeStampInfo.HashAlgorithm.Algorithm.Id);
 
                 System.Security.Cryptography.Xml.Transform transform = null;
 

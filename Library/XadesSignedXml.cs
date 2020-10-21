@@ -31,6 +31,8 @@ using System.Security.Cryptography.X509Certificates;
 using System.Security.Cryptography.Xml;
 using System.Xml;
 using System.Xml.Schema;
+#pragma warning disable 1591
+#pragma warning disable 1574
 
 namespace Microsoft.Xades
 {
@@ -1891,7 +1893,7 @@ namespace Microsoft.Xades
             if (hashAlgorithm == null)
                 throw new CryptographicException("signature description can't be created");
 
-            /// NECESARIO PARA EL CALCULO CORRECTO
+            // NECESARIO PARA EL CALCULO CORRECTO
             byte[] hashval = GetC14NDigest(hashAlgorithm, "ds");
 
             AsymmetricSignatureDeformatter asymmetricSignatureDeformatter = signatureDescription.CreateDeformatter(key);
@@ -2399,3 +2401,5 @@ namespace Microsoft.Xades
         #endregion
     }
 }
+#pragma warning restore 1591
+#pragma warning restore 1574

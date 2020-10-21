@@ -20,7 +20,7 @@
 // E-Mail: informatica@gemuc.es
 // 
 // --------------------------------------------------------------------------------------------------------------------
-
+#pragma warning disable CA1416
 using Org.BouncyCastle.Crypto.Parameters;
 using System;
 using System.Collections.Generic;
@@ -158,3 +158,4 @@ namespace FirmaXadesNet.Utils
         #endregion
     }
 }
+#pragma warning restore CA1416

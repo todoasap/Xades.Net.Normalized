@@ -23,6 +23,8 @@
 using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Security.Cryptography;
+#pragma warning disable 1591
+#pragma warning disable 1574
 
 namespace Microsoft.Xades
 {
@@ -131,3 +133,5 @@ namespace Microsoft.Xades
     }
 }
 
+#pragma warning restore 1591
+#pragma warning restore 1574
