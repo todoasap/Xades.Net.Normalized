@@ -4,7 +4,7 @@ Xades.NetCore
  
 INTRODUCTION
 -------------
-FirmaXadesNet is a C# library for creation of XAdES signatures. It is made by the Department of New Technologies of the Urban Planning Department of the Cartagena City Council. It is based on a modification of the XAdES starter kit developed by Microsoft France.
+FirmaXadesNet is a C# library for creation of XAdES signatures. Developed by the Department of New Technologies of the Urban Planning Department of the Cartagena City Council, it is based on a modification of the XAdES starter kit developed by Microsoft France.
 
 
 FEATURES
