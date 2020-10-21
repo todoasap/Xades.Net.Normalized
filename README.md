@@ -6,7 +6,7 @@ Xades.NetCore
 
 INTRODUCCIÓN
 -------------
-FirmaXadesNet es una librería desarrollada en C# (NET 5.0) para la generación de firmas XAdES realizada por el Dpto. de Nuevas Tecnologías de la Concejalía de Urbanismo del Ayuntamiento de Cartagena, la cual está basada en una modificación del XAdES starter kit desarrollado por Microsoft Francia.
+FirmaXadesNet es una librería desarrollada en C# (.NET 5.0) para la generación de firmas XAdES realizada por el Dpto. de Nuevas Tecnologías de la Concejalía de Urbanismo del Ayuntamiento de Cartagena, la cual está basada en una modificación del XAdES starter kit desarrollado por Microsoft Francia.
 
 
 CARACTERÍSTICAS
