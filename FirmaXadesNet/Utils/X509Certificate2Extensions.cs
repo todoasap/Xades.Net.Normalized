@@ -61,7 +61,7 @@ namespace FirmaXadesNet.Utils
 
         public static Org.BouncyCastle.X509.X509Certificate ToBouncyX509Certificate(this X509Certificate2 certificate)
         {
-            return Org.BouncyCastle.Security.DotNetUtilities.FromX509Certificate(certificate);
+            return new Org.BouncyCastle.X509.X509CertificateParser().ReadCertificate(certificate.GetRawCertData());
         }
     }
 }
