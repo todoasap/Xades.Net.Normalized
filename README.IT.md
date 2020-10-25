@@ -25,3 +25,41 @@ CARATTERISTICHE
 All'interno della soluzione è presente un progetto con esempi di utilizzo della libreria. Alcuni degli esempi fanno uso del timestamp server  ACCV (Agencia de Tecnología y Certificación Electrónica, Spagna). 
 
 Come esempio di uitlizzo avviare il progetto TextFirmaXades, che consente di firmare digitalmente i file Xml.
+
+
+**Esempio di utilizzo per firma Enveloped:**
+
+```C#
+private void button3_Click(object sender, EventArgs e)
+    {
+        if (string.IsNullOrEmpty(nomeFileXml))
+        {
+            MessageBox.Show("l'Xml non è pronto per la firma.");
+            return;
+        }
+
+        XadesService xadesService = new XadesService();
+        SignatureParameters parametri = new SignatureParameters();
+        parametri.SignatureMethod = SignatureMethod.RSAwithSHA512;
+        parametri.SigningDate = DateTime.Now;
+
+        // Test SignatureCommitment
+        var sc = new SignatureCommitment(SignatureCommitmentType.ProofOfOrigin);
+        parametri.SignatureCommitments.Add(sc);
+
+        parametri.SignaturePackaging = SignaturePackaging.ENVELOPED;
+
+        using (parametri.Signer = new Signer(CertUtil.SelectCertificate()))
+        {
+            using (FileStream fs = new FileStream(nomeFileXml, FileMode.Open))
+            {
+                _signatureDocument = xadesService.Sign(fs, parametri);
+            }
+
+        }
+        _signatureDocument.Save(nomeFileXmlFirmato);
+        MessageBox.Show("File Firmato Correttamente.", "Firma XADES",
+            MessageBoxButtons.OK, MessageBoxIcon.Information);
+      
+    }
+```
