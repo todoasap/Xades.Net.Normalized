@@ -27,3 +27,40 @@ CARACTERÍSTICAS
 Dentro de la solución se encuentra un proyecto con ejemplos de uso de la librería. Algunos de los ejemplos hacen uso del servidor de sellado de tiempo de la ACCV.
 
 Como ejemplo, inicie el proyecto TextFirmaXades, que permite firmar digitalmente archivos Xml.
+
+**Ejemplo de firma "Enveloped":**
+
+```C#
+private void button3_Click(object sender, EventArgs e)
+    {
+        if (string.IsNullOrEmpty(nomeFileXml))
+        {
+            MessageBox.Show("l'Xml non è pronto per la firma.");
+            return;
+        }
+
+        XadesService xadesService = new XadesService();
+        SignatureParameters parametri = new SignatureParameters();
+        parametri.SignatureMethod = SignatureMethod.RSAwithSHA512;
+        parametri.SigningDate = DateTime.Now;
+
+        // Test SignatureCommitment
+        var sc = new SignatureCommitment(SignatureCommitmentType.ProofOfOrigin);
+        parametri.SignatureCommitments.Add(sc);
+
+        parametri.SignaturePackaging = SignaturePackaging.ENVELOPED;
+
+        using (parametri.Signer = new Signer(CertUtil.SelectCertificate()))
+        {
+            using (FileStream fs = new FileStream(nomeFileXml, FileMode.Open))
+            {
+                _signatureDocument = xadesService.Sign(fs, parametri);
+            }
+
+        }
+        _signatureDocument.Save(nomeFileXmlFirmato);
+        MessageBox.Show("File Firmato Correttamente.", "Firma XADES",
+            MessageBoxButtons.OK, MessageBoxIcon.Information);
+      
+    }
+```
