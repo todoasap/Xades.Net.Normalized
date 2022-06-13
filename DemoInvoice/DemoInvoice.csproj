@@ -13,17 +13,8 @@
     <Compile Update="FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Update="FrmSeleccionarFirma.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="FrmSeleccionarFirma.Designer.cs">
-      <DependentUpon>FrmSeleccionarFirma.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Update="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Update="FrmSeleccionarFirma.resx">
-      <DependentUpon>FrmSeleccionarFirma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Update="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -46,11 +37,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FirmaXadesNet\XadesSignature.Net.csproj" />
-    <ProjectReference Include="..\Library\Microsoft.Xades.csproj" />
+    <Content Include="Facturae.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XadesSignature.Net\XadesSignature.Net.csproj" />
+    <ProjectReference Include="..\Microsoft.Xades\Microsoft.Xades.csproj" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.6.0-preview3.19128.7" />
-    <PackageReference Include="System.Security.Cryptography.Xml" Version="6.0.0" />
   </ItemGroup>
 </Project>

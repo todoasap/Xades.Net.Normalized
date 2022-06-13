@@ -6,8 +6,8 @@
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FirmaXadesNet\XadesSignature.Net.csproj" />
-    <ProjectReference Include="..\Library\Microsoft.Xades.csproj" />
+    <ProjectReference Include="..\XadesSignature.Net\XadesSignature.Net.csproj" />
+    <ProjectReference Include="..\Microsoft.Xades\Microsoft.Xades.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="xsdBOE-A-2011-13169_ex_XAdES_Internally_detached.xml">
