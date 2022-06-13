@@ -105,7 +105,7 @@ namespace TestFirmaXades
         {
             if (string.IsNullOrEmpty(txtFichero.Text))
             {
-                MessageBox.Show("Debe seleccionar un fichero para firmar.");
+                MessageBox.Show("You must select a file to sign.");
                 return;
             }
 
@@ -148,7 +148,7 @@ namespace TestFirmaXades
                 }
             }
             
-            MessageBox.Show("Firma completada, ahora puede Guardar la firma o ampliarla a Xades-T.", "Test firma XADES",
+            MessageBox.Show("Signature completed, you can now Save the signature or extend it to Xades-T.", "XAdES signature test",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -163,7 +163,7 @@ namespace TestFirmaXades
                 _signatureDocument = xadesService.CoSign(_signatureDocument, parametros);
             }
 
-            MessageBox.Show("Firma completada correctamente.", "Test firma XADES",
+            MessageBox.Show("Signature completed successfully.", "XAdES signature test",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -187,12 +187,12 @@ namespace TestFirmaXades
                 XadesUpgraderService upgrader = new XadesUpgraderService();
                 upgrader.Upgrade(_signatureDocument, formato, parametros);
               
-                MessageBox.Show("Firma ampliada correctamente", "Test firma XADES",
+                MessageBox.Show("Signature enlarged successfully", "XADES signature test",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ha ocurrido un error ampliando la firma: " + ex.Message);
+                MessageBox.Show("An error occurred while extending the signature: " + ex.Message);
             }
         }
 
@@ -212,7 +212,7 @@ namespace TestFirmaXades
             {
                 _signatureDocument.Save(saveFileDialog1.FileName);
 
-                MessageBox.Show("Firma guardada correctamente.");
+                MessageBox.Show("Signature saved successfully.");
             }
         }
 
@@ -241,12 +241,12 @@ namespace TestFirmaXades
 
                         if (!result.IsValid)
                         {
-                            MessageBox.Show(result.Message, "FIRMA NO VÁLIDA");
+                            MessageBox.Show(result.Message, "INVALID SIGNATURE");
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Debe seleccionar una firma.");
+                        MessageBox.Show("You must select a signature.");
                     }
                 }
             }
@@ -263,7 +263,7 @@ namespace TestFirmaXades
                 _signatureDocument = xadesService.CounterSign(_signatureDocument, parametros);
             }
 
-            MessageBox.Show("Firma completada correctamente.", "Test firma XADES",
+            MessageBox.Show("Signature completed successfully.", "XAdES signature test",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -271,13 +271,13 @@ namespace TestFirmaXades
         {
             if (!rbInternnallyDetached.Checked)
             {
-                MessageBox.Show("Por favor, seleccione el tipo de firma internally detached.");
+                MessageBox.Show("Please select the signature type internally detached.");
                 return;
             }
 
             if (string.IsNullOrEmpty(txtFichero.Text))
             {
-                MessageBox.Show("Debe seleccionar un fichero para firmar.");
+                MessageBox.Show("You must select a file to sign.");
                 return;
             }
 
@@ -297,7 +297,7 @@ namespace TestFirmaXades
                 }
             }            
 
-            MessageBox.Show("Firma completada, ahora puede Guardar la firma o ampliarla a Xades-T.", "Test firma XADES",
+            MessageBox.Show("Signature completed, you can now Save the signature or extend it to Xades-T.", "XAdES signature test",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
@@ -313,7 +313,7 @@ namespace TestFirmaXades
 
                 if (files.Count == 0)
                 {
-                    MessageBox.Show("No se han encontrado documentos");
+                    MessageBox.Show("No documents found");
                     return;
                 }
 
@@ -337,7 +337,7 @@ namespace TestFirmaXades
                     }
                 }
 
-                MessageBox.Show("Proceso completado");
+                MessageBox.Show("Process completed");
             }
         }
 

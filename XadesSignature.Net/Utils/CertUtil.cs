@@ -93,7 +93,7 @@ namespace FirmaXadesNet.Utils
 
                     if (cert.HasPrivateKey == false)
                     {
-                        throw new Exception("El certificado no tiene asociada una clave privada.");
+                        throw new Exception("The certificate does not have an associated private key.");
                     }
                 }
 
@@ -102,7 +102,7 @@ namespace FirmaXadesNet.Utils
             catch (Exception ex)
             {
                 // Thx @rasputino
-                throw new Exception("No se ha podido obtener la clave privada.", ex);
+                throw new Exception("Failed to get private key.", ex);
             }
 
             return cert;
