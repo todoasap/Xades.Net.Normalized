@@ -21,7 +21,7 @@
 // 
 // --------------------------------------------------------------------------------------------------------------------
 
-using FirmaXadesNet.Crypto;
+using XadesSignatureNet.Crypto;
 using Org.BouncyCastle.Math;
 using Org.BouncyCastle.Tsp;
 using System;
@@ -29,7 +29,7 @@ using System.IO;
 using System.Net;
 using System.Text;
 
-namespace FirmaXadesNet.Clients
+namespace XadesSignatureNet.Clients
 {
     public class TimeStampClient : ITimeStampClient
     {

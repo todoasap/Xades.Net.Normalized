@@ -21,10 +21,10 @@
 // 
 // --------------------------------------------------------------------------------------------------------------------
 
-using FirmaXadesNet.Signature;
+using XadesSignatureNet.Signature;
 using System.Windows.Forms;
 
-namespace TestFirmaXades
+namespace XadesSignatureNetTestGUI
 {
     public partial class FrmSeleccionarFirma : Form
     {

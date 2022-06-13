@@ -25,7 +25,7 @@
 using System;
 using System.Security.Cryptography;
 
-namespace FirmaXadesNet.Crypto
+namespace XadesSignatureNet.Crypto
 {
     public class DigestMethod
     {

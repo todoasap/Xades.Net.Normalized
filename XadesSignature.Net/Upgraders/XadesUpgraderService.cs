@@ -21,15 +21,15 @@
 // 
 // --------------------------------------------------------------------------------------------------------------------
 
-using FirmaXadesNet.Signature;
-using FirmaXadesNet.Upgraders.Parameters;
+using XadesSignatureNet.Signature;
+using XadesSignatureNet.Upgraders.Parameters;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FirmaXadesNet.Upgraders
+namespace XadesSignatureNet.Upgraders
 {
     public enum SignatureFormat
     {

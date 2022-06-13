@@ -1,4 +1,4 @@
-﻿namespace DemoFacturae
+﻿namespace DemoInvoice
 {
     partial class FrmPrincipal
     {

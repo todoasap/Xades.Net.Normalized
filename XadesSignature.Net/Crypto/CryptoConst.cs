@@ -21,7 +21,7 @@
 // 
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace FirmaXadesNet.Crypto
+namespace XadesSignatureNet.Crypto
 {
     class CryptoConst
     {

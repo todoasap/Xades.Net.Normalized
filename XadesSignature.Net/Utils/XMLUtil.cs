@@ -29,7 +29,7 @@ using System.Security.Cryptography.Xml;
 using System.Text;
 using System.Xml;
 
-namespace FirmaXadesNet.Utils
+namespace XadesSignatureNet.Utils
 {
     class XMLUtil
     {

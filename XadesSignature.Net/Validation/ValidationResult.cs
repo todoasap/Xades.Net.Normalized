@@ -22,7 +22,7 @@
 // --------------------------------------------------------------------------------------------------------------------
 
 
-namespace FirmaXadesNet.Validation
+namespace XadesSignatureNet.Validation
 {
     public class ValidationResult
     {

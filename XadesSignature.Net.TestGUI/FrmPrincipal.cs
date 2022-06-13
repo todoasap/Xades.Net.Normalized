@@ -21,22 +21,22 @@
 // 
 // --------------------------------------------------------------------------------------------------------------------
 
-using FirmaXadesNet;
-using FirmaXadesNet.Clients;
-using FirmaXadesNet.Crypto;
-using FirmaXadesNet.Signature;
-using FirmaXadesNet.Signature.Parameters;
-using FirmaXadesNet.Upgraders;
-using FirmaXadesNet.Upgraders.Parameters;
-using FirmaXadesNet.Utils;
-using FirmaXadesNet.Validation;
+using XadesSignatureNet;
+using XadesSignatureNet.Clients;
+using XadesSignatureNet.Crypto;
+using XadesSignatureNet.Signature;
+using XadesSignatureNet.Signature.Parameters;
+using XadesSignatureNet.Upgraders;
+using XadesSignatureNet.Upgraders.Parameters;
+using XadesSignatureNet.Utils;
+using XadesSignatureNet.Validation;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Security.Cryptography.X509Certificates;
 using System.Windows.Forms;
 
-namespace TestFirmaXades
+namespace XadesSignatureNetTestGUI
 {
     public partial class FrmPrincipal : Form
     {

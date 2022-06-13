@@ -21,11 +21,11 @@
 // 
 // --------------------------------------------------------------------------------------------------------------------
 
-using FirmaXadesNet;
-using FirmaXadesNet.Crypto;
-using FirmaXadesNet.Signature;
-using FirmaXadesNet.Signature.Parameters;
-using FirmaXadesNet.Utils;
+using XadesSignatureNet;
+using XadesSignatureNet.Crypto;
+using XadesSignatureNet.Signature;
+using XadesSignatureNet.Signature.Parameters;
+using XadesSignatureNet.Utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -40,7 +40,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 
-namespace DemoFirmaManifest
+namespace DemoSignatureManifest
 {
     public partial class FrmPrincipal : Form
     {
@@ -90,7 +90,7 @@ namespace DemoFirmaManifest
 
             SignatureDocument documentoFirma;
 
-            using (parametros.Signer = new Signer(FirmaXadesNet.Utils.CertUtil.SelectCertificate()))
+            using (parametros.Signer = new Signer(XadesSignatureNet.Utils.CertUtil.SelectCertificate()))
             {
                 using (MemoryStream ms = new MemoryStream())
                 {

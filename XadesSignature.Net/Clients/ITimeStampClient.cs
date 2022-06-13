@@ -21,10 +21,10 @@
 // 
 // --------------------------------------------------------------------------------------------------------------------
 
-using FirmaXadesNet.Crypto;
+using XadesSignatureNet.Crypto;
 using System;
 
-namespace FirmaXadesNet.Clients
+namespace XadesSignatureNet.Clients
 {
     public interface ITimeStampClient
     {

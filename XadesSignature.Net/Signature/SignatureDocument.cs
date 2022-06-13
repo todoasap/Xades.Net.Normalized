@@ -21,7 +21,7 @@
 // 
 // --------------------------------------------------------------------------------------------------------------------
 
-using FirmaXadesNet.Utils;
+using XadesSignatureNet.Utils;
 using Microsoft.Xades;
 using System;
 using System.IO;
@@ -29,7 +29,7 @@ using System.Security.Cryptography.Xml;
 using System.Text;
 using System.Xml;
 
-namespace FirmaXadesNet.Signature
+namespace XadesSignatureNet.Signature
 {
     public class SignatureDocument
     {

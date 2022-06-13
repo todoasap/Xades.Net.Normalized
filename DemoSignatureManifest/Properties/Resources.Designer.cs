@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DemoFirmaManifest.Properties {
+namespace DemoSignatureManifest.Properties {
     using System;
     
     

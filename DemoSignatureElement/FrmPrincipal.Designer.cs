@@ -1,4 +1,4 @@
-﻿namespace DemoFirmaElemento
+﻿namespace DemoSignatureElement
 {
     partial class FrmPrincipal
     {

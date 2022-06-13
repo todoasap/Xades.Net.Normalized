@@ -1,4 +1,4 @@
-﻿namespace TestFirmaXades
+﻿namespace XadesSignatureNetTestGUI
 {
     partial class FrmSeleccionarFirma
     {

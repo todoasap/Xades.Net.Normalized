@@ -28,7 +28,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 
-namespace FirmaXadesNet.Signature.Parameters
+namespace XadesSignatureNet.Signature.Parameters
 {
     public class SignatureCommitment
     {

@@ -21,10 +21,10 @@
 // 
 // --------------------------------------------------------------------------------------------------------------------
 
-using FirmaXadesNet.Clients;
-using FirmaXadesNet.Signature;
-using FirmaXadesNet.Upgraders.Parameters;
-using FirmaXadesNet.Utils;
+using XadesSignatureNet.Clients;
+using XadesSignatureNet.Signature;
+using XadesSignatureNet.Upgraders.Parameters;
+using XadesSignatureNet.Utils;
 using Microsoft.Xades;
 using Org.BouncyCastle.Asn1;
 using Org.BouncyCastle.Asn1.Ocsp;
@@ -43,7 +43,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Security.Cryptography.Xml;
 using System.Xml;
 
-namespace FirmaXadesNet.Upgraders
+namespace XadesSignatureNet.Upgraders
 {
     class XadesXLUpgrader : IXadesUpgrader
     {
@@ -150,7 +150,7 @@ namespace FirmaXadesNet.Upgraders
         /// <param name="addCertValue"></param>
         /// <param name="extraCerts"></param>
         private void AddCertificate(X509Certificate2 cert, UnsignedProperties unsignedProperties, bool addCert, IEnumerable<OcspServer> ocspServers,
-            IEnumerable<X509Crl> crlList, FirmaXadesNet.Crypto.DigestMethod digestMethod, bool addCertificateOcspUrl, X509Certificate2[] extraCerts = null)
+            IEnumerable<X509Crl> crlList, XadesSignatureNet.Crypto.DigestMethod digestMethod, bool addCertificateOcspUrl, X509Certificate2[] extraCerts = null)
         {
             if (addCert)
             {
@@ -234,7 +234,7 @@ namespace FirmaXadesNet.Upgraders
         }
 
         private bool ValidateCertificateByCRL(UnsignedProperties unsignedProperties, X509Certificate2 certificate, X509Certificate2 issuer,
-            IEnumerable<X509Crl> crlList, FirmaXadesNet.Crypto.DigestMethod digestMethod)
+            IEnumerable<X509Crl> crlList, XadesSignatureNet.Crypto.DigestMethod digestMethod)
         {
             Org.BouncyCastle.X509.X509Certificate clientCert = certificate.ToBouncyX509Certificate();
             Org.BouncyCastle.X509.X509Certificate issuerCert = issuer.ToBouncyX509Certificate();
@@ -285,7 +285,7 @@ namespace FirmaXadesNet.Upgraders
         }
 
         private X509Certificate2[] ValidateCertificateByOCSP(UnsignedProperties unsignedProperties, X509Certificate2 client, X509Certificate2 issuer,
-            IEnumerable<OcspServer> ocspServers, FirmaXadesNet.Crypto.DigestMethod digestMethod, bool addCertificateOcspUrl)
+            IEnumerable<OcspServer> ocspServers, XadesSignatureNet.Crypto.DigestMethod digestMethod, bool addCertificateOcspUrl)
         {
             bool byKey = false;
             List<OcspServer> finalOcspServers = new List<OcspServer>();
@@ -314,13 +314,13 @@ namespace FirmaXadesNet.Upgraders
                 byte[] resp = ocsp.QueryBinary(clientCert, issuerCert, ocspServer.Url, ocspServer.RequestorName,
                     ocspServer.SignCertificate);
 
-                FirmaXadesNet.Clients.CertificateStatus status = ocsp.ProcessOcspResponse(resp);
+                XadesSignatureNet.Clients.CertificateStatus status = ocsp.ProcessOcspResponse(resp);
 
-                if (status == FirmaXadesNet.Clients.CertificateStatus.Revoked)
+                if (status == XadesSignatureNet.Clients.CertificateStatus.Revoked)
                 {
                     throw new Exception("Certificado revocado");
                 }
-                else if (status == FirmaXadesNet.Clients.CertificateStatus.Good)
+                else if (status == XadesSignatureNet.Clients.CertificateStatus.Good)
                 {
                     Org.BouncyCastle.Ocsp.OcspResp r = new OcspResp(resp);
                     byte[] rEncoded = r.GetEncoded();
@@ -379,7 +379,7 @@ namespace FirmaXadesNet.Upgraders
         /// Inserta y valida los certificados del servidor de sellado de tiempo.
         /// </summary>
         /// <param name="unsignedProperties"></param>
-        private void AddTSACertificates(UnsignedProperties unsignedProperties, IEnumerable<OcspServer> ocspServers, IEnumerable<X509Crl> crlList, FirmaXadesNet.Crypto.DigestMethod digestMethod, bool addCertificateOcspUrl)
+        private void AddTSACertificates(UnsignedProperties unsignedProperties, IEnumerable<OcspServer> ocspServers, IEnumerable<X509Crl> crlList, XadesSignatureNet.Crypto.DigestMethod digestMethod, bool addCertificateOcspUrl)
         {
             TimeStampToken token = new TimeStampToken(new CmsSignedData(unsignedProperties.UnsignedSignatureProperties.SignatureTimeStampCollection[0].EncapsulatedTimeStamp.PkiData));
             IX509Store store = token.GetCertificates("Collection");

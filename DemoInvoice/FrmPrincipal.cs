@@ -21,16 +21,16 @@
 // 
 // --------------------------------------------------------------------------------------------------------------------
 
-using FirmaXadesNet;
-using FirmaXadesNet.Crypto;
-using FirmaXadesNet.Signature.Parameters;
-using FirmaXadesNet.Utils;
+using XadesSignatureNet;
+using XadesSignatureNet.Crypto;
+using XadesSignatureNet.Signature.Parameters;
+using XadesSignatureNet.Utils;
 using System;
 using System.IO;
 using System.Security.Cryptography.X509Certificates;
 using System.Windows.Forms;
 
-namespace DemoFacturae
+namespace DemoInvoice
 {
     public partial class FrmPrincipal : Form
     {
@@ -64,7 +64,7 @@ namespace DemoFacturae
             parametros.SignerRole = new SignerRole();
             parametros.SignerRole.ClaimedRoles.Add("emisor");
 
-            using (parametros.Signer = new Signer(FirmaXadesNet.Utils.CertUtil.SelectCertificate()))
+            using (parametros.Signer = new Signer(XadesSignatureNet.Utils.CertUtil.SelectCertificate()))
             {
                 using (FileStream fs = new FileStream(ficheroFactura, FileMode.Open))
                 {

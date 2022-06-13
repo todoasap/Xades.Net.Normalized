@@ -28,7 +28,7 @@ using System.Reflection;
 using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 
-namespace FirmaXadesNet.Crypto
+namespace XadesSignatureNet.Crypto
 {
     public class Signer : IDisposable
     {

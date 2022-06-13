@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DemoFirmaElemento.Properties {
+namespace DemoSignatureElement.Properties {
     using System;
     
     

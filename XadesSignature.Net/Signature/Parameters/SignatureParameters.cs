@@ -21,11 +21,11 @@
 // 
 // --------------------------------------------------------------------------------------------------------------------
 
-using FirmaXadesNet.Crypto;
+using XadesSignatureNet.Crypto;
 using System;
 using System.Collections.Generic;
 
-namespace FirmaXadesNet.Signature.Parameters
+namespace XadesSignatureNet.Signature.Parameters
 {
     public enum SignaturePackaging
     {

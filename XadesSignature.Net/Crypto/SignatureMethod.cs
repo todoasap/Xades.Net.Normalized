@@ -27,7 +27,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FirmaXadesNet.Crypto
+namespace XadesSignatureNet.Crypto
 {
     public class SignatureMethod
     {

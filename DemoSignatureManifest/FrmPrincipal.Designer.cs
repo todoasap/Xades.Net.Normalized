@@ -1,4 +1,4 @@
-﻿namespace DemoFirmaManifest
+﻿namespace DemoSignatureManifest
 {
     partial class FrmPrincipal
     {

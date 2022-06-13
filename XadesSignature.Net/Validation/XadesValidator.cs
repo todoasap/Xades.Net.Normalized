@@ -22,8 +22,8 @@
 // --------------------------------------------------------------------------------------------------------------------
 
 
-using FirmaXadesNet.Signature;
-using FirmaXadesNet.Utils;
+using XadesSignatureNet.Signature;
+using XadesSignatureNet.Utils;
 using Microsoft.Xades;
 using Org.BouncyCastle.Cms;
 using Org.BouncyCastle.Tsp;
@@ -33,7 +33,7 @@ using System.Collections;
 using System.Security.Cryptography;
 using System.Security.Cryptography.Xml;
 
-namespace FirmaXadesNet.Validation
+namespace XadesSignatureNet.Validation
 {
     class XadesValidator
     {

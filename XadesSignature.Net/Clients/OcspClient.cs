@@ -21,7 +21,7 @@
 // 
 // --------------------------------------------------------------------------------------------------------------------
 
-using FirmaXadesNet.Utils;
+using XadesSignatureNet.Utils;
 using Org.BouncyCastle.Asn1;
 using Org.BouncyCastle.Asn1.Ocsp;
 using Org.BouncyCastle.Asn1.Pkcs;
@@ -38,7 +38,7 @@ using System.IO;
 using System.Net;
 using System.Security.Cryptography;
 
-namespace FirmaXadesNet.Clients
+namespace XadesSignatureNet.Clients
 {
     public enum CertificateStatus { Good = 0, Revoked = 1, Unknown = 2 };
 

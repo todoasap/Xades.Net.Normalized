@@ -21,14 +21,14 @@
 // 
 // --------------------------------------------------------------------------------------------------------------------
 
-using FirmaXadesNet.Crypto;
+using XadesSignatureNet.Crypto;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FirmaXadesNet.Signature.Parameters
+namespace XadesSignatureNet.Signature.Parameters
 {
     public class SignaturePolicyInfo
     {
