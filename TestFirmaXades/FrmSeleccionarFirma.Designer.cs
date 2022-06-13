@@ -36,44 +36,49 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 21);
+            this.label1.Location = new System.Drawing.Point(24, 24);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 13);
+            this.label1.Size = new System.Drawing.Size(99, 15);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Listado de firmas";
+            this.label1.Text = "List of signatures:";
             // 
             // lstFirmas
             // 
             this.lstFirmas.FormattingEnabled = true;
             this.lstFirmas.HorizontalScrollbar = true;
-            this.lstFirmas.Location = new System.Drawing.Point(24, 47);
+            this.lstFirmas.ItemHeight = 15;
+            this.lstFirmas.Location = new System.Drawing.Point(28, 54);
+            this.lstFirmas.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.lstFirmas.Name = "lstFirmas";
             this.lstFirmas.ScrollAlwaysVisible = true;
-            this.lstFirmas.Size = new System.Drawing.Size(473, 121);
+            this.lstFirmas.Size = new System.Drawing.Size(551, 139);
             this.lstFirmas.TabIndex = 1;
             // 
             // btnAceptar
             // 
             this.btnAceptar.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnAceptar.Location = new System.Drawing.Point(422, 184);
+            this.btnAceptar.Location = new System.Drawing.Point(492, 212);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
+            this.btnAceptar.Size = new System.Drawing.Size(88, 27);
             this.btnAceptar.TabIndex = 2;
-            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.Text = "Accept";
             this.btnAceptar.UseVisualStyleBackColor = true;
             // 
             // FrmSeleccionarFirma
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(522, 219);
+            this.ClientSize = new System.Drawing.Size(609, 253);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.lstFirmas);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "FrmSeleccionarFirma";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Seleccionar firma";
+            this.Text = "Select signature";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -84,7 +84,8 @@ namespace FirmaXadesNet.Utils
                     title = "Firmar archivo";
                 }
 
-                X509Certificate2Collection scollection = X509Certificate2UI.SelectFromCollection(fcollection, title, message, X509SelectionFlag.SingleSelection);
+                throw new Exception("NOT IMPLEMENTED (missing X509Certificate2UI and X509SelectionFlag)");
+                X509Certificate2Collection scollection = null; // X509Certificate2UI.SelectFromCollection(fcollection, title, message, X509SelectionFlag.SingleSelection);
 
                 if (scollection != null && scollection.Count == 1)
                 {

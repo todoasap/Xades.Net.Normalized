@@ -6,7 +6,7 @@
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FirmaXadesNet\FirmaXadesNet.csproj" />
+    <ProjectReference Include="..\FirmaXadesNet\XadesSignature.Net.csproj" />
     <ProjectReference Include="..\Library\Microsoft.Xades.csproj" />
   </ItemGroup>
   <ItemGroup>

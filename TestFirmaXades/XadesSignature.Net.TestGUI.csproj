@@ -46,11 +46,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FirmaXadesNet\FirmaXadesNet.csproj" />
+    <ProjectReference Include="..\FirmaXadesNet\XadesSignature.Net.csproj" />
     <ProjectReference Include="..\Library\Microsoft.Xades.csproj" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.6.0-preview3.19128.7" />
-    <PackageReference Include="System.Security.Cryptography.Xml" Version="5.0.0-rc.2.20475.5" />
+    <PackageReference Include="System.Security.Cryptography.Xml" Version="6.0.0" />
   </ItemGroup>
 </Project>
