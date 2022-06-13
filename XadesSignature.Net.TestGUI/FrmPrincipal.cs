@@ -33,6 +33,7 @@ using FirmaXadesNet.Validation;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Security.Cryptography.X509Certificates;
 using System.Windows.Forms;
 
 namespace TestFirmaXades
@@ -43,6 +44,13 @@ namespace TestFirmaXades
 
         public FrmPrincipal()
         {
+            // Core.MZ.20220613: Injecting function because .NET Core misses X509Certificate2UI and X509SelectionFlag
+            CertUtil.FunctionToSelectCertFromCollection = (X509Certificate2Collection fcollection, string title, string message) => {
+                
+                return X509Certificate2UI.SelectFromCollection(fcollection, title, message, X509SelectionFlag.SingleSelection);
+
+            }; 
+
             InitializeComponent();
         }
 

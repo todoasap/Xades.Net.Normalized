@@ -57,6 +57,9 @@ namespace FirmaXadesNet.Utils
             return chain;
         }
 
+        //Core.MZ.20220613: Must inject function because .NET Core misses X509Certificate2UI and X509SelectionFlag:
+        public static Func<X509Certificate2Collection, string, string, X509Certificate2Collection> FunctionToSelectCertFromCollection;
+
         /// <summary>
         /// Selecciona un certificado del almacén de certificados
         /// </summary>
@@ -76,16 +79,16 @@ namespace FirmaXadesNet.Utils
 
                 if (string.IsNullOrEmpty(message))
                 {
-                    message = "Seleccione un certificado.";
+                    message = "Select a certificate.";
                 }
 
                 if (string.IsNullOrEmpty(title))
                 {
-                    title = "Firmar archivo";
+                    title = "Sign file";
                 }
 
-                throw new Exception("NOT IMPLEMENTED (missing X509Certificate2UI and X509SelectionFlag)");
-                X509Certificate2Collection scollection = null; // X509Certificate2UI.SelectFromCollection(fcollection, title, message, X509SelectionFlag.SingleSelection);
+                //throw new Exception("NOT IMPLEMENTED (missing X509Certificate2UI and X509SelectionFlag)");
+                X509Certificate2Collection scollection = FunctionToSelectCertFromCollection(fcollection, title, message); // null; // X509Certificate2UI.SelectFromCollection(fcollection, title, message, X509SelectionFlag.SingleSelection);
 
                 if (scollection != null && scollection.Count == 1)
                 {
