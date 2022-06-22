@@ -28,11 +28,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("FirmaXadesNet")]
-[assembly: AssemblyDescription("Librería para la generación de firmas XADES")]
+[assembly: AssemblyTitle("XadesSignatureNet")]
+[assembly: AssemblyDescription("XADES signature generation library")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Dpto. de Nuevas Tecnologías de la Concejalía de Urbanismo de Cartagena")]
-[assembly: AssemblyProduct("FirmaXadesNet")]
+[assembly: AssemblyCompany("Department of New Technologies of the Department of Urbanism of Cartagena")]
+[assembly: AssemblyProduct("XadesSignatureNet")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

@@ -97,39 +97,15 @@ namespace XadesSignatureNet.Crypto
 
         private void SetSigningKey(X509Certificate2 certificate)
         {
-            //////var key = (RSACryptoServiceProvider)certificate.PrivateKey;
+            // Core.MZ.20220622 (invalid cast exception / RSACng instead of RSACryptoServiceProvider in newest .NET): var key = (RSACryptoServiceProvider)certificate.PrivateKey;
 
-            // TEST:
-            RSA keyRsa = certificate.GetRSAPrivateKey();
-            RSACng keyRsaCng = (RSACng)certificate.PrivateKey;
+            // Core.MZ.20220622:
+            RSA keyRsa = certificate.GetRSAPrivateKey(); 
 
-            if (
-                false
-            )
-            {
-                //////Type CspKeyContainerInfo_Type = typeof(CspKeyContainerInfo);
+            _signingKey = keyRsa;
+            _disposeCryptoProvider = false;
 
-                //////FieldInfo CspKeyContainerInfo_m_parameters = CspKeyContainerInfo_Type.GetField("m_parameters", BindingFlags.NonPublic | BindingFlags.Instance);
-                //////CspParameters parameters = (CspParameters)CspKeyContainerInfo_m_parameters.GetValue(key.CspKeyContainerInfo);
-
-                //////var cspparams = new CspParameters(
-                //////    CryptoConst.PROV_RSA_AES,
-                //////    CryptoConst.MS_ENH_RSA_AES_PROV,
-                //////    key.CspKeyContainerInfo.KeyContainerName
-                //////);
-
-                //////cspparams.KeyNumber = parameters.KeyNumber;
-                //////cspparams.Flags = parameters.Flags;
-                _signingKey = keyRsa; // new RSACryptoServiceProvider(cspparams);
-
-                _disposeCryptoProvider = true;
-            }
-            else
-            {
-                _signingKey = keyRsa;
-                _disposeCryptoProvider = false;
-            }
-
+            // Core.MZ.20220622:
             //if (key.CspKeyContainerInfo.ProviderName == CryptoConst.MS_STRONG_PROV ||
             //    key.CspKeyContainerInfo.ProviderName == CryptoConst.MS_ENHANCED_PROV ||
             //    key.CspKeyContainerInfo.ProviderName == CryptoConst.MS_DEF_PROV || 

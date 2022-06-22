@@ -208,7 +208,7 @@ namespace XadesSignatureNet.Signature
             
             if (sigDocument.Document == null || sigDocument.XadesSignature == null)
             {
-                throw new Exception("No existe información sobre la firma");
+                throw new Exception("There is no information about the firm");
             }
         }
 

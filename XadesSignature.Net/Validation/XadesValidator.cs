@@ -60,7 +60,7 @@ namespace XadesSignatureNet.Validation
             catch (Exception ex)
             {
                 result.IsValid = false;
-                result.Message = "La verificación de la firma no ha sido satisfactoria";
+                result.Message = "Signature verification was unsuccessful";
 
                 return result;
             }
@@ -96,14 +96,14 @@ namespace XadesSignatureNet.Validation
                 if (!Arrays.AreEqual(tsHashValue, signatureValueHash))
                 {
                     result.IsValid = false;
-                    result.Message = "La huella del sello de tiempo no se corresponde con la calculada";
+                    result.Message = "The time stamp footprint does not correspond to the calculated one";
 
                     return result;
                 }
             }
 
             result.IsValid = true;
-            result.Message = "Verificación de la firma satisfactoria";
+            result.Message = "Successful signature verification";
 
             return result;
         }

@@ -47,7 +47,7 @@ namespace XadesSignatureNet.Upgraders
             {
                 if (unsignedProperties.UnsignedSignatureProperties.SignatureTimeStampCollection.Count > 0)
                 {
-                    throw new Exception("La firma ya contiene un sello de tiempo");
+                    throw new Exception("The signature already contains a timestamp");
                 }
 
                 XmlDsigExcC14NTransform excTransform = new XmlDsigExcC14NTransform();
@@ -73,7 +73,7 @@ namespace XadesSignatureNet.Upgraders
             }
             catch (Exception ex)
             {
-                throw new Exception("Ha ocurrido un error al insertar el sellado de tiempo.", ex);
+                throw new Exception("An error occurred while inserting the timestamp.", ex);
             }
         }
 

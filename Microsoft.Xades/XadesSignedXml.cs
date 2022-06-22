@@ -727,7 +727,7 @@ namespace Microsoft.Xades
 
             if (keyXml == null)
             {
-                throw new Exception("No se ha podido obtener el certificado de firma");
+                throw new Exception("Failed to get signing certificate");
             }
 
             return new X509Certificate2(Convert.FromBase64String(keyXml.InnerText));
@@ -1459,7 +1459,6 @@ namespace Microsoft.Xades
 
             return;
         }
-
 
         private SignatureDescription GetSignatureDescription()
         {

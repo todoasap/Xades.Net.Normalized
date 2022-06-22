@@ -61,12 +61,12 @@ namespace XadesSignatureNet
         {
             if (parameters.Signer == null)
             {
-                throw new Exception("Es necesario un certificado válido para la firma");
+                throw new Exception("A valid certificate is required for signing");
             }
 
             if (input == null && string.IsNullOrEmpty(parameters.ExternalContentUri))
             {
-                throw new Exception("No se ha especificado ningún contenido a firmar");
+                throw new Exception("No content to sign has been specified");
             }
 
             SignatureDocument signatureDocument = new SignatureDocument();
@@ -77,7 +77,7 @@ namespace XadesSignatureNet
                 case SignaturePackaging.INTERNALLY_DETACHED:
                     if (parameters.DataFormat == null || string.IsNullOrEmpty(parameters.DataFormat.MimeType))
                     {
-                        throw new NullReferenceException("Se necesita especificar el tipo MIME del elemento a firmar.");
+                        throw new NullReferenceException("You need to specify the MIME type of the element to sign.");
                     }
 
                     _dataFormat.MimeType = parameters.DataFormat.MimeType;
@@ -131,7 +131,7 @@ namespace XadesSignatureNet
                         XmlNode idAttribute = inputXml.FirstChild.Attributes.GetNamedItem("Id");
                         if (idAttribute == null)
                         {
-                            throw new Exception("Se requiere un identificador para el objeto manifest");
+                            throw new Exception("An identifier is required for the manifest object");
                         }
 
                         SetContentEveloping(signatureDocument, inputXml, idAttribute.Value, XadesSignedXml.XmlDsigManifestType);
@@ -187,7 +187,7 @@ namespace XadesSignatureNet
 
             if (_refContent == null)
             {
-                throw new Exception("No se ha podido encontrar la referencia del contenido firmado.");
+                throw new Exception("The signed content reference could not be found.");
             }
 
             _dataFormat = null;
@@ -263,7 +263,7 @@ namespace XadesSignatureNet
         {
             if (parameters.Signer == null)
             {
-                throw new Exception("Es necesario un certificado válido para la firma.");
+                throw new Exception("A valid certificate is required for signing.");
             }
 
             SignatureDocument.CheckSignatureDocument(sigDocument);
@@ -374,7 +374,7 @@ namespace XadesSignatureNet
 
             if (signatureNodeList.Count == 0)
             {
-                throw new Exception("No se ha encontrado ninguna firma.");
+                throw new Exception("No signature found.");
             }
 
             List<SignatureDocument> firmas = new List<SignatureDocument>();
@@ -469,7 +469,7 @@ namespace XadesSignatureNet
         {
             sigDocument.Document = new XmlDocument();
 
-            XmlElement rootElement = sigDocument.Document.CreateElement("DOCFIRMA");
+            XmlElement rootElement = sigDocument.Document.CreateElement("DOCSIGNATURE");
             sigDocument.Document.AppendChild(rootElement);
 
             string id = "CONTENT-" + Guid.NewGuid().ToString();
@@ -526,7 +526,7 @@ namespace XadesSignatureNet
         {
             sigDocument.Document = new XmlDocument();
 
-            XmlElement rootElement = sigDocument.Document.CreateElement("DOCFIRMA");
+            XmlElement rootElement = sigDocument.Document.CreateElement("DOCSIGNATURE");
             sigDocument.Document.AppendChild(rootElement);
 
             string id = "CONTENT-" + Guid.NewGuid().ToString();
@@ -628,7 +628,7 @@ namespace XadesSignatureNet
 
             if (nodo == null)
             {
-                throw new Exception("Elemento no encontrado");
+                throw new Exception("Item not found");
             }
 
             sigDocument.XadesSignature.SignatureNodeDestination = (XmlElement)nodo;
@@ -655,7 +655,6 @@ namespace XadesSignatureNet
 
                 _refContent.AddTransform(new XmlDsigC14NTransform());
             }
-
 
             sigDocument.XadesSignature.AddReference(_refContent);
         }
@@ -789,7 +788,6 @@ namespace XadesSignatureNet
             sigDocument.XadesSignature.AddXadesObject(xadesObject);
         }
 
-
         private void AddCertificateInfo(SignatureDocument sigDocument, SignatureParameters parameters)
         {
             sigDocument.XadesSignature.SigningKey = parameters.Signer.SigningKey;
@@ -808,7 +806,6 @@ namespace XadesSignatureNet
 
             sigDocument.XadesSignature.AddReference(reference);
         }
-
 
         private void AddSignatureProperties(SignatureDocument sigDocument, SignedSignatureProperties signedSignatureProperties, SignedDataObjectProperties signedDataObjectProperties,
                    UnsignedSignatureProperties unsignedSignatureProperties, SignatureParameters parameters)
