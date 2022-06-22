@@ -97,30 +97,61 @@ namespace XadesSignatureNet.Crypto
 
         private void SetSigningKey(X509Certificate2 certificate)
         {
-            var key = (RSACryptoServiceProvider)certificate.PrivateKey;
+            //////var key = (RSACryptoServiceProvider)certificate.PrivateKey;
 
-            if (key.CspKeyContainerInfo.ProviderName == CryptoConst.MS_STRONG_PROV ||
-                key.CspKeyContainerInfo.ProviderName == CryptoConst.MS_ENHANCED_PROV ||
-                key.CspKeyContainerInfo.ProviderName == CryptoConst.MS_DEF_PROV || 
-                key.CspKeyContainerInfo.ProviderName == CryptoConst.MS_DEF_RSA_SCHANNEL_PROV)
+            // TEST:
+            RSA keyRsa = certificate.GetRSAPrivateKey();
+            RSACng keyRsaCng = (RSACng)certificate.PrivateKey;
+
+            if (
+                false
+            )
             {
-                Type CspKeyContainerInfo_Type = typeof(CspKeyContainerInfo);
+                //////Type CspKeyContainerInfo_Type = typeof(CspKeyContainerInfo);
 
-                FieldInfo CspKeyContainerInfo_m_parameters = CspKeyContainerInfo_Type.GetField("m_parameters", BindingFlags.NonPublic | BindingFlags.Instance);
-                CspParameters parameters = (CspParameters)CspKeyContainerInfo_m_parameters.GetValue(key.CspKeyContainerInfo);
+                //////FieldInfo CspKeyContainerInfo_m_parameters = CspKeyContainerInfo_Type.GetField("m_parameters", BindingFlags.NonPublic | BindingFlags.Instance);
+                //////CspParameters parameters = (CspParameters)CspKeyContainerInfo_m_parameters.GetValue(key.CspKeyContainerInfo);
 
-                var cspparams = new CspParameters(CryptoConst.PROV_RSA_AES, CryptoConst.MS_ENH_RSA_AES_PROV, key.CspKeyContainerInfo.KeyContainerName);
-                cspparams.KeyNumber = parameters.KeyNumber;
-                cspparams.Flags = parameters.Flags;
-                _signingKey = new RSACryptoServiceProvider(cspparams);
+                //////var cspparams = new CspParameters(
+                //////    CryptoConst.PROV_RSA_AES,
+                //////    CryptoConst.MS_ENH_RSA_AES_PROV,
+                //////    key.CspKeyContainerInfo.KeyContainerName
+                //////);
+
+                //////cspparams.KeyNumber = parameters.KeyNumber;
+                //////cspparams.Flags = parameters.Flags;
+                _signingKey = keyRsa; // new RSACryptoServiceProvider(cspparams);
 
                 _disposeCryptoProvider = true;
             }
             else
             {
-                _signingKey = key;
+                _signingKey = keyRsa;
                 _disposeCryptoProvider = false;
             }
+
+            //if (key.CspKeyContainerInfo.ProviderName == CryptoConst.MS_STRONG_PROV ||
+            //    key.CspKeyContainerInfo.ProviderName == CryptoConst.MS_ENHANCED_PROV ||
+            //    key.CspKeyContainerInfo.ProviderName == CryptoConst.MS_DEF_PROV || 
+            //    key.CspKeyContainerInfo.ProviderName == CryptoConst.MS_DEF_RSA_SCHANNEL_PROV)
+            //{
+            //    Type CspKeyContainerInfo_Type = typeof(CspKeyContainerInfo);
+
+            //    FieldInfo CspKeyContainerInfo_m_parameters = CspKeyContainerInfo_Type.GetField("m_parameters", BindingFlags.NonPublic | BindingFlags.Instance);
+            //    CspParameters parameters = (CspParameters)CspKeyContainerInfo_m_parameters.GetValue(key.CspKeyContainerInfo);
+
+            //    var cspparams = new CspParameters(CryptoConst.PROV_RSA_AES, CryptoConst.MS_ENH_RSA_AES_PROV, key.CspKeyContainerInfo.KeyContainerName);
+            //    cspparams.KeyNumber = parameters.KeyNumber;
+            //    cspparams.Flags = parameters.Flags;
+            //    _signingKey = new RSACryptoServiceProvider(cspparams);
+
+            //    _disposeCryptoProvider = true;
+            //}
+            //else
+            //{
+            //    _signingKey = key;
+            //    _disposeCryptoProvider = false;
+            //}
         }
 
         #endregion
