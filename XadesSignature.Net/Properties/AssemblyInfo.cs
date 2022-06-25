@@ -30,7 +30,7 @@ using System.Runtime.InteropServices;
 // associated with an assembly.
 [assembly: AssemblyTitle("XadesSignatureNet")]
 [assembly: AssemblyDescription("XADES signature generation library")]
-[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyConfiguration("Stacc Core Customizations by Marek Zakrzewski, 2022")]
 [assembly: AssemblyCompany("Department of New Technologies of the Department of Urbanism of Cartagena")]
 [assembly: AssemblyProduct("XadesSignatureNet")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]

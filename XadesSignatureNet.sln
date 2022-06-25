@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.32014.148
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XadesSignature.Net", "XadesSignature.Net\XadesSignature.Net.csproj", "{84B87815-DD45-4C60-B343-C11D45847BDF}"
 EndProject
@@ -14,6 +14,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoSignatureElement", "DemoSignatureElement\DemoSignatureElement.csproj", "{1AD6C6B7-725B-4DF3-A377-FA8AEECA3160}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoSignatureManifest", "DemoSignatureManifest\DemoSignatureManifest.csproj", "{39C4C6B8-7006-45FA-A790-8F02196D641D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stacc.Core.XAdES.Client", "Stacc.Core.XAdES.Client\Stacc.Core.XAdES.Client.csproj", "{587A2552-25D6-47B3-B361-3D8C13EFD727}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -89,6 +91,18 @@ Global
 		{39C4C6B8-7006-45FA-A790-8F02196D641D}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{39C4C6B8-7006-45FA-A790-8F02196D641D}.Release|x86.ActiveCfg = Release|Any CPU
 		{39C4C6B8-7006-45FA-A790-8F02196D641D}.Release|x86.Build.0 = Release|Any CPU
+		{587A2552-25D6-47B3-B361-3D8C13EFD727}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{587A2552-25D6-47B3-B361-3D8C13EFD727}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{587A2552-25D6-47B3-B361-3D8C13EFD727}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{587A2552-25D6-47B3-B361-3D8C13EFD727}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{587A2552-25D6-47B3-B361-3D8C13EFD727}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{587A2552-25D6-47B3-B361-3D8C13EFD727}.Debug|x86.Build.0 = Debug|Any CPU
+		{587A2552-25D6-47B3-B361-3D8C13EFD727}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{587A2552-25D6-47B3-B361-3D8C13EFD727}.Release|Any CPU.Build.0 = Release|Any CPU
+		{587A2552-25D6-47B3-B361-3D8C13EFD727}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{587A2552-25D6-47B3-B361-3D8C13EFD727}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{587A2552-25D6-47B3-B361-3D8C13EFD727}.Release|x86.ActiveCfg = Release|Any CPU
+		{587A2552-25D6-47B3-B361-3D8C13EFD727}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

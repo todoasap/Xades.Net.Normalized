@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Microsoft.Xades\Microsoft.Xades.csproj" />
+    <ProjectReference Include="..\XadesSignature.Net\XadesSignature.Net.csproj" />
+  </ItemGroup>
+
+</Project>

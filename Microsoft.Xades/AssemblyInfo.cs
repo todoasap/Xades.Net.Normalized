@@ -28,7 +28,7 @@ using System.Runtime.CompilerServices;
 // associated with an assembly.
 [assembly: AssemblyTitle("XAdES Library")]
 [assembly: AssemblyDescription("XAdES Library")]
-[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyConfiguration("Stacc Core Customizations by Marek Zakrzewski, 2022")]
 [assembly: AssemblyCompany("Microsoft France")]
 [assembly: AssemblyProduct("XAdES Starter Kit")]
 [assembly: AssemblyCopyright("2010")]
