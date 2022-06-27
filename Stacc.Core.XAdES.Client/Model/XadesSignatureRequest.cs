@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace Stacc.Core.XAdES.Client.Model
+namespace Stacc.Core.DigitalSignature.Client.Model
 {
     public class XadesSignatureRequest
     {

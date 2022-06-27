@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Stacc.Core.XAdES.Client
+namespace Stacc.Core.DigitalSignature.Client
 {
-    public class XadesSignatureClient : IDisposable
+    public class DigitalSignatureClient : IDisposable
     {
         private string _signingCertThumbprint;
 
-        public XadesSignatureClient(string signingCertThumbprint)
+        public DigitalSignatureClient(
+            string signingCertThumbprint
+        )
         {
             _signingCertThumbprint = signingCertThumbprint;
         }

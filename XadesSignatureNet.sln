@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoSignatureElement", "Dem
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoSignatureManifest", "DemoSignatureManifest\DemoSignatureManifest.csproj", "{39C4C6B8-7006-45FA-A790-8F02196D641D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stacc.Core.XAdES.Client", "Stacc.Core.XAdES.Client\Stacc.Core.XAdES.Client.csproj", "{587A2552-25D6-47B3-B361-3D8C13EFD727}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stacc.Core.DigitalSignature.Client", "Stacc.Core.XAdES.Client\Stacc.Core.DigitalSignature.Client.csproj", "{587A2552-25D6-47B3-B361-3D8C13EFD727}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
